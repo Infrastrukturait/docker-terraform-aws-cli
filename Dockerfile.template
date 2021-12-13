@@ -1,0 +1,21 @@
+#
+# NOTE: THIS DOCKERFILE IS GENERATED VIA "{{SCRIPT_NAME}}"
+#
+# PLEASE DO NOT EDIT IT DIRECTLY.
+#
+# templater engine: mustash {{TEMPLATER_VERSION}} (https://github.com/Infrastrukturait/mustash)
+
+FROM docker.io/hashicorp/terraform:{{TERRAFORM_VERSION}}
+
+LABEL maintainer="{{MAINTAINER}}"
+
+RUN apk add --no-cache \
+        python3 \
+        py3-pip \
+    && pip3 install --upgrade pip \
+    && pip3 install \
+        awscli \
+    && rm -rf /var/cache/apk/*
+
+RUN aws --version
+

@@ -1,0 +1,8 @@
+\#
+\# NOTE: THIS DOCKERFILE IS GENERATED VIA "{{SCRIPT_NAME}}"
+\#
+\# PLEASE DO NOT EDIT IT DIRECTLY.
+\#
+\# templater engine: mustash {{TEMPLATER_VERSION}} (https://github.com/Infrastrukturait/mustash)
+
+
