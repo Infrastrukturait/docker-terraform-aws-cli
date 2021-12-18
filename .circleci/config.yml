@@ -7,7 +7,7 @@ jobs:
       - run: |
           set -xu
           apk add --no-cache tree
-          tree
+          tree -a
 
 workflows:
   version: 2
