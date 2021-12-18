@@ -7,8 +7,7 @@ jobs:
       - checkout
       - run: |
           set -xu
-          apk add --no-cache tree
-          tree -a
+          sh .circleci/scripts/build.sh
 
 workflows:
   version: 2

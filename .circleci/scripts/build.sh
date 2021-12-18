@@ -3,7 +3,7 @@
 if [[ "$CIRCLE_BRANCH" == main ]]; then
     CURR=$(pwd)
     LATEST_VER=$(cat ./latest)
-    DOCKERFILES=$(git show --name-status --oneline | tail -n +2 | egrep "(.*)/Dockerfile")
+    DOCKERFILES=$(git show --name-status --oneline | tail -n +2 | egrep "(.*)/Dockerfile$")
     if test -z "$DOCKERFILES"
     then
         echo "Nothing to do."
