@@ -8,6 +8,7 @@ jobs:
       - run: |
           set -xu
           sh .circleci/scripts/build.sh
+          docker images
 
 workflows:
   version: 2
