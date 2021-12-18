@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 if [[ "$CIRCLE_BRANCH" == main ]]; then
     CURR=$(pwd)

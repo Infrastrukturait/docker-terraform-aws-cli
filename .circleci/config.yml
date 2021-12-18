@@ -6,7 +6,7 @@ jobs:
       - checkout
       - run: |
           set -xu
-          sh .circleci/scripts/build.sh
+          bash .circleci/scripts/build.sh
           docker images
 
 workflows:
