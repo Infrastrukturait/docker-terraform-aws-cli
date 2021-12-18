@@ -6,7 +6,8 @@ jobs:
     steps:
       - run: |
           set -xu
-          sh $CIRCLE_WORKING_DIRECTORY/.circleci/scripts/build.sh
+          apk add --no-cache tree
+          tree
 
 workflows:
   version: 2
