@@ -2,10 +2,11 @@ version: 2
 jobs:
   build:
     docker:
-      - image: docker:20.10-git
+      - image: docker:20.10-dind
     steps:
       - checkout
       - run: |
+          add --no-cache git
           set -xu
           sh .circleci/scripts/build.sh
 
