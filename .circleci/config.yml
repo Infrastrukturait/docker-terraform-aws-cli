@@ -3,8 +3,8 @@ jobs:
   build:
     docker:
       - image: docker:latest
-    working_directory: /
     steps:
+      - checkout
       - run: |
           set -xu
           apk add --no-cache tree
