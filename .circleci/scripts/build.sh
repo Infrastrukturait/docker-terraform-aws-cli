@@ -43,7 +43,6 @@ if [[ "$CIRCLE_BRANCH" == main ]]; then
             unset meta
             docker build --build-arg BUILD_DATE=$(date -u +'%Y-%m-%dT%H:%M:%SZ') --build-arg VCS_REF=$CIRCLE_BUILD_NUM -t ${DOCKER_NAMESPACE}/${DOCKER_NAME}:$tag .
             if [[ "${LATEST_VER}" == "$tag" ]]; then
-            if [[ "${LATEST_VER}" == "$tag" ]]; then
                 docker tag ${DOCKER_NAMESPACE}/${DOCKER_NAME}:$tag ${DOCKER_NAMESPACE}/${DOCKER_NAME}:latest
             fi
             cd $CURR
