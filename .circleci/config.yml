@@ -1,14 +1,14 @@
 version: 2
 jobs:
   build:
-    docker:
-      - image: docker:20.10-dind
+    machine: true
     steps:
       - checkout
       - run: |
           apk add --no-cache git
           set -xu
           sh .circleci/scripts/build.sh
+          docker images
 
 workflows:
   version: 2
