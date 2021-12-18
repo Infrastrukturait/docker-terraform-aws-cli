@@ -9,7 +9,6 @@ if [[ "$CIRCLE_BRANCH" == main ]]; then
         echo "Nothing to do."
         exit 0
     fi
-    docker login -u $DOCKER_USER -p $DOCKER_PASSWORD dcr.apz.pl:5000
     while IFS= read -r i; do
         cd $CURR
         if [[ "$i" =~ ^A.* ]]; then
