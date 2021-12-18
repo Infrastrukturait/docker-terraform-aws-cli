@@ -1,0 +1,19 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: docker/docker:latest
+    steps:
+      - run: |
+          set -xu
+          sh .circleci/scripts/build.sh
+
+workflows:
+  version: 2
+  main:
+    jobs:
+      - build:
+          filters:
+            branches:
+              only:
+                - master
